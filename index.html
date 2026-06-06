@@ -6,16 +6,31 @@
     <title>Fábio Silva | Interiores Simplificados</title>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #0a0a0a; color: #ffffff; margin: 0; padding: 40px 20px; display: block; text-align: center; }
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            Minha-Foto.jpeg
+            background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('URL_DA_SUA_IMAGEM_DE_FUNDO') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff; 
+            margin: 0; 
+            padding: 40px 20px; 
+            display: block; 
+            text-align: center; 
+        }
         .container { max-width: 600px; margin: 0 auto; text-align: left; }
+        
+        /* Estilização da Foto Profissional */
+        .perfil-container { text-align: center; margin-bottom: 20px; }
+        .perfil-foto { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #c5a059; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        
         h1 { font-size: 2.2rem; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px; text-align: center; text-transform: uppercase; }
         h2 { font-size: 1.1rem; color: #c5a059; font-weight: 400; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
         
-        .passos { background: #141414; padding: 30px; border-left: 3px solid #c5a059; margin-bottom: 40px; }
+        .passos { background: rgba(20, 20, 20, 0.9); padding: 30px; border-left: 3px solid #c5a059; margin-bottom: 40px; backdrop-filter: blur(5px); }
         .passos p { font-size: 1rem; color: #b3b3b3; line-height: 1.6; margin: 10px 0; }
         strong { color: #ffffff; font-weight: 500; }
         
-        form { background: #141414; padding: 30px; border: 1px solid #222; border-radius: 4px; margin-top: 30px; }
+        form { background: rgba(20, 20, 20, 0.9); padding: 30px; border: 1px solid #222; border-radius: 4px; margin-top: 30px; backdrop-filter: blur(5px); }
         .form-group { margin-bottom: 25px; }
         label { display: block; font-size: 0.95rem; color: #e0c07b; margin-bottom: 8px; font-weight: 500; letter-spacing: 0.5px; }
         input[type="text"], select, textarea { width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-size: 1rem; border-radius: 4px; transition: border 0.3s; }
@@ -30,6 +45,12 @@
 </head>
 <body>
     <div class="container">
+        
+        <!-- Bloco da Foto -->
+        <div class="perfil-container">
+            <img src="URL_DA_SUA_FOTO" alt="Fábio Silva" class="perfil-foto">
+        </div>
+
         <h1>O Alto Luxo Simplificado</h1>
         <h2>Projetos de Interiores com Assertividade e Agilidade</h2>
         
@@ -39,7 +60,15 @@
             <p><strong>3. A Aprovação:</strong> Você vem à loja direto para ver o visual pronto, validar os valores e fechar.</p>
         </div>
 
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <!-- Integração com Web3Forms para envio direto ao seu e-mail -->
+        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+            
+            <!-- Substitua pelo código enviado para o seu e-mail pelo Web3Forms -->
+            <input type="hidden" name="access_key" value="COLOQUE_SUA_CHAVE_AQUI">
+            
+            <!-- Redirecionamento automático após o cliente clicar em enviar (Ex: seu link do WhatsApp) -->
+            <input type="hidden" name="redirect" value="https://wa.me/SEUNUMERO">
+
             <div class="form-group">
                 <label for="nome">Seu Nome Completo</label>
                 <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
