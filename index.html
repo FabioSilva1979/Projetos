@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábio Silva | Interiores Simplificados</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #0a0a0a; color: #ffffff; margin: 0; padding: 40px 20px; display: block; text-align: center; }
+        .container { max-width: 600px; margin: 0 auto; text-align: left; }
+        h1 { font-size: 2.2rem; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px; text-align: center; text-transform: uppercase; }
+        h2 { font-size: 1.1rem; color: #c5a059; font-weight: 400; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
+        
+        .passos { background: #141414; padding: 30px; border-left: 3px solid #c5a059; margin-bottom: 40px; }
+        .passos p { font-size: 1rem; color: #b3b3b3; line-height: 1.6; margin: 10px 0; }
+        strong { color: #ffffff; font-weight: 500; }
+        
+        form { background: #141414; padding: 30px; border: 1px solid #222; border-radius: 4px; margin-top: 30px; }
+        .form-group { margin-bottom: 25px; }
+        label { display: block; font-size: 0.95rem; color: #e0c07b; margin-bottom: 8px; font-weight: 500; letter-spacing: 0.5px; }
+        input[type="text"], select, textarea { width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-size: 1rem; border-radius: 4px; transition: border 0.3s; }
+        input:focus, select:focus, textarea:focus { border-color: #c5a059; outline: none; }
+        input[type="file"] { background: #0a0a0a; padding: 10px; width: 100%; border: 1px dashed #444; color: #b3b3b3; cursor: pointer; }
+        
+        .btn-enviar { display: block; width: 100%; background-color: #c5a059; color: #0a0a0a; padding: 15px; border: none; font-weight: bold; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: background 0.3s ease; text-align: center; margin-top: 10px; }
+        .btn-enviar:hover { background-color: #e0c07b; }
+        
+        .footer-text { text-align: center; font-size: 0.9rem; color: #666; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>O Alto Luxo Simplificado</h1>
+        <h2>Projetos de Interiores com Assertividade e Agilidade</h2>
+        
+        <div class="passos">
+            <p><strong>1. O Formulário:</strong> Preencha os dados essenciais da sua obra abaixo.</p>
+            <p><strong>2. O Briefing & Projeto:</strong> Fábio Silva analisa suas informações e elabora a proposta técnica em 3D hiper-realista.</p>
+            <p><strong>3. A Aprovação:</strong> Você vem à loja direto para ver o visual pronto, validar os valores e fechar.</p>
+        </div>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome">Seu Nome Completo</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp para Contato</label>
+                <input type="text" id="whatsapp" name="whatsapp" required placeholder="(31) 99999-9999">
+            </div>
+
+            <div class="form-group">
+                <label for="ambientes">Quais ambientes você busca fazer?</label>
+                <textarea id="ambientes" name="ambientes" rows="3" required placeholder="Ex: Cozinha integrada, sala de estar, quarto casal..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="investimento">Valor planejado para investimento (R$)</label>
+                <select id="investimento" name="investimento" required>
+                    <option value="" disabled selected>Selecione uma faixa de valor</option>
+                    <option value="Ate 30k">Até R$ 30.000</option>
+                    <option value="30k a 70k">R$ 30.000 a R$ 70.000</option>
+                    <option value="70k a 150k">R$ 70.000 a R$ 150.000</option>
+                    <option value="Acima de 150k">Acima de R$ 150.000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="prazo">Qual o prazo máximo esperado para a entrega da obra?</label>
+                <input type="text" id="prazo" name="prazo" required placeholder="Ex: 3 meses, imediato...">
+            </div>
+
+            <div class="form-group">
+                <label for="pretensao_compra">Quando pretende estar efetuando a sua compra?</label>
+                <select id="pretensao_compra" name="pretensao_compra" required>
+                    <option value="" disabled selected>Selecione o momento de compra</option>
+                    <option value="Imediato">Imediatamente esta semana</option>
+                    <option value="Este mes">Ainda este mês</option>
+                    <option value="Proximos meses">Nos próximos 60 a 90 dias</option>
+                    <option value="Apenas cotando">Estou apenas cotando/planejando</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="planta">Anexe a sua planta técnica ou rascunho das medidas (Opcional)</label>
+                <input type="file" id="planta" name="planta" accept=".pdf, .png, .jpg, .jpeg, .dwg">
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Informações e Iniciar Projeto</button>
+        </form>
+        
+        <p class="footer-text">Sua obra sem complicação. Mais tempo para você viver a sua vida.</p>
+    </div>
+</body>
+</html>
